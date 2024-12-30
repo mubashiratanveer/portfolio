@@ -1,11 +1,10 @@
+
 "use client";
 import Typewriter from "typewriter-effect";
-
 import { Dancing_Script } from "next/font/google";
 const newFont = Dancing_Script({
   subsets: ['latin']
 });
-
 import React from "react";
 export default function About(){
   return (
@@ -26,7 +25,6 @@ export default function About(){
             innovative technologies.
           </p>
         </section>
-
         {/* journey Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-2">My Journey</h2>
@@ -58,7 +56,6 @@ export default function About(){
             exploring new technologies.
           </p>
         </section>
-
         {/* How I Can Help You Section */}
         <section className="mb-12">
           <h2 className="text-3xl font-semibold mb-2">How I Can Help You:</h2>
@@ -79,7 +76,3 @@ export default function About(){
     </div>
   );
 };
-
-;
-
-

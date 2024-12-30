@@ -1,12 +1,12 @@
+
 "use client";
-
-
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -16,17 +16,18 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <div  >
           <header className={` fixed w-full bg-pink-500 top-0 left-0 transition-all duration-300 z-50 
          ${isScrolled ? 'bg-pink-500 bg-opacity-70 backdrop-blur-sm' : 'bg-pink-500'}`}>   
     <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
       <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <img
-          src="profile-pic.jpg"
+        <Image
+          src="/profile-pic.jpg"
           alt="logo"
           className="w-10 h-10 rounded-full  border-2 border-blue-600 p-0.5"
+          width={500}
+          height={500}
         />
         <span className="ml-3 text-lg font-bold text-black  ">Portfolio</span>
       </a>

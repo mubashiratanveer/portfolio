@@ -20,7 +20,6 @@ export default  function Skill(){
     const spinners = document.querySelectorAll('.spinner');
     spinners.forEach((spinner) => {
       const percentage = parseInt(spinner.getAttribute('data-percentage') || '0', 10);
-      const degree = (percentage / 100) * 360;
       spinner.animate(
         [{ strokeDashoffset: 440 }, { strokeDashoffset: 440 - (440 * percentage) / 100 }],
         { duration: 2000, fill: 'forwards' }

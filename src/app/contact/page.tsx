@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-Link;
+
 export default function Contact() {
   return (
     <div className="bg-black py-28">
@@ -9,7 +9,7 @@ export default function Contact() {
           <h1 className="text-blue-500 text-3xl font-extrabold">Let's Talk</h1>
           <p className="text-sm text-gray-500 mt-4">
             Have some big idea or brand to develop and need help? Then reach out
-            we'd love to hear about your project and provide help.
+            I love to hear about your project and provide help.
           </p>
 
           <div className="mt-12">

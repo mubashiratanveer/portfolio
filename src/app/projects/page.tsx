@@ -1,6 +1,7 @@
-Link
+
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 
 type Project = {
   title: string;
@@ -13,43 +14,43 @@ const projects: Project[] = [
   {
     title: 'Resume Builder',
     description: 'A tool to create professional resumes quickly.',
-    imgSrc: 'resume.webp',
+    imgSrc: '/resume.webp',
     liveDemoLink: 'https://resume-builder-black.vercel.app/',
   },
   {
     title: 'Home Decor and Seating Chair Website',
     description: 'An e-commerce website project is a full-featured online platform that allows users to browse, select, and purchase products.🛒',
-    imgSrc: 'websitePic3.png',
+    imgSrc: '/websitePic3.png',
     liveDemoLink: 'https://ui-ux-hackathone-theta.vercel.app/',
   },
   {
     title: 'Aestheic Bag website',
     description: 'An e-commerce website project is a full-featured online platform that allows users to browse, select, and purchase products.🛒',
-    imgSrc: 'websitePic2.png',
+    imgSrc: '/websitePic2.png',
     liveDemoLink: 'https://e-commerce-website-lilac-seven.vercel.app/',
   },
   {
     title: 'To-do List',
     description: 'It allows users to create, manage, and prioritize tasks, ensuring they stay on top of their responsibilities and boost productivity. 📝',
-    imgSrc: 'to-do-list.png',
+    imgSrc: '/to-do-list.png',
     liveDemoLink: 'https://to-do-list-one-opal-57.vercel.app/',
   }, 
   {
     title: 'Counter',
     description: 'A counter project is a simple web application that allows users to Pause,Start and Reset functionality🔢.',
-    imgSrc: 'counter.png',
+    imgSrc: '/counter.png',
     liveDemoLink: 'https://counter-sigma-three.vercel.app/',
   },
   {
     title: 'Inventory Management System',
     description: 'An inventory management system helps businesses efficiently track.📦',
-    imgSrc: 'websitePic4.png',
+    imgSrc: '/websitePic4.png',
     liveDemoLink: 'https://inventory-management-system-ten-jade.vercel.app/',
   },
   {
     title: 'E-commerce Website',
     description: 'A full-featured e-commerce web application.',
-    imgSrc: 'websitePic.png',
+    imgSrc: '/websitePic.png',
     liveDemoLink: 'https://github.com/mubashiratanveer/hackathone-practice.git',
   }, 
 ];
@@ -58,37 +59,37 @@ const cliProjects: Project[] = [
   {
     title: 'CLI Calculator',
     description: 'A simple calculator built with command-line interface.',
-    imgSrc: 'calculator.webp',
+    imgSrc: '/calculator.webp',
     liveDemoLink: 'https://github.com/mubashiratanveer/simple_calculator-.git',
   },
   {
     title: 'ATM Machine',
     description: 'A CLI based ATM machine simulation.',
-    imgSrc: 'ATM.jpg',
+    imgSrc: '/ATM.jpg',
     liveDemoLink: 'https://github.com/mubashiratanveer/ATM-machine.git',
   },
   {
     title: 'Student Management System',
     description: 'A CLI system to manage student information.',
-    imgSrc: 'Management.jpg',
+    imgSrc: '/Management.jpg',
     liveDemoLink: 'https://github.com/mubashiratanveer/student-management-system.git',
   },
   {
     title: 'Currency Converter',
     description: 'CLI tool to convert between different currencies.',
-    imgSrc: 'Currency-Converter.jpg',
+    imgSrc: '/Currency-Converter.jpg',
     liveDemoLink: 'https://github.com/mubashiratanveer/currency_convertor.git',
   },
   {
     title: 'Number Guessing Game',
     description: 'A fun CLI game to guess the number.',
-    imgSrc: 'No-Guessing.jpg',
+    imgSrc: '/No-Guessing.jpg',
     liveDemoLink: 'https://github.com/mubashiratanveer/cli-number-guessing-game-.git',
   },
   {
     title: '45 Question Assignment',
     description: 'A CLI based 45 Question Typescript Assignment',
-    imgSrc: '45-Ques.jpeg',
+    imgSrc: '/45-Ques.jpeg',
     liveDemoLink: 'https://github.com/mubashiratanveer/45-question-of-assignment.git',
   },
 
@@ -103,7 +104,9 @@ const ProjectPage: React.FC = () => {
           {projects.map((project, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-blue-500 transition-transform 
             duration-300 ease-in-out hover:scale-105">
-              <img src={project.imgSrc} alt={project.title} className="w-auto h-46 object-cover " />
+              <Image src={project.imgSrc} alt={project.title} className="w-auto h-46 object-cover "
+               width={500}
+               height={500} />
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
                 <p className="text-gray-700 mb-4">{project.description}</p>
@@ -124,7 +127,9 @@ const ProjectPage: React.FC = () => {
           {cliProjects.map((project, index) => (
             <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg border-2 border-blue-500 transition-transform 
             duration-300 ease-in-out hover:scale-105">
-              <img src={project.imgSrc} alt={project.title} className="w-full h-48 object-cover " />
+              <Image src={project.imgSrc} alt={project.title} className="w-full h-48 object-cover "
+              width={500}
+              height={500} />
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
                 <p className="text-gray-700 mb-4">{project.description}</p>
